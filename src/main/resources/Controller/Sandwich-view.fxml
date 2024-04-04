@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="494.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.SandwichViewController">
+   <children>
+      <Text fill="#190eab" layoutX="140.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Sandwich">
+         <font>
+            <Font name="Hiragino Sans W2" size="33.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="sandwichImage" fitHeight="150.0" fitWidth="200.0" layoutX="168.0" layoutY="73.0" pickOnBounds="true" preserveRatio="true" />
+      <Text layoutX="70.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bread">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="68.0" layoutY="312.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add-on">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <Text layoutX="70.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sub-total">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Text>
+      <GridPane layoutX="136.0" layoutY="232.0" prefHeight="33.0" prefWidth="363.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="60.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="96.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="196.0" minWidth="10.0" prefWidth="196.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <RadioButton fx:id="bagel" mnemonicParsing="false" text="Bagel">
+               <toggleGroup>
+                  <ToggleGroup fx:id="breadGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="wheatToast" mnemonicParsing="false" prefHeight="19.0" prefWidth="111.0" text="Wheat Toast" toggleGroup="$breadGroup" GridPane.columnIndex="1" />
+            <RadioButton fx:id="sourDough" mnemonicParsing="false" text="Sour Dough" toggleGroup="$breadGroup" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="136.0" layoutY="258.0" prefHeight="33.0" prefWidth="363.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="115.0" minWidth="10.0" prefWidth="60.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="182.0" minWidth="10.0" prefWidth="75.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.0" minWidth="10.0" prefWidth="222.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <RadioButton fx:id="beef" mnemonicParsing="false" text="Beef">
+               <toggleGroup>
+                  <ToggleGroup fx:id="proteinGroup" />
+               </toggleGroup></RadioButton>
+            <RadioButton fx:id="chicken" mnemonicParsing="false" prefHeight="19.0" prefWidth="111.0" text="Chicken" toggleGroup="$proteinGroup" GridPane.columnIndex="1" />
+            <RadioButton fx:id="fish" mnemonicParsing="false" text="Fish" toggleGroup="$proteinGroup" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="136.0" layoutY="292.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="73.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="127.0" minWidth="10.0" prefWidth="79.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="149.0" minWidth="10.0" prefWidth="74.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="174.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="lettuce" mnemonicParsing="false" text="Lettuce" />
+            <CheckBox fx:id="tomato" mnemonicParsing="false" text="Tomato" GridPane.columnIndex="1" />
+            <CheckBox fx:id="cheese" mnemonicParsing="false" text="Cheese" GridPane.columnIndex="2" />
+            <CheckBox fx:id="onion" mnemonicParsing="false" text="Onion" GridPane.columnIndex="3" />
+         </children>
+      </GridPane>
+      <TextField fx:id="subtotal" layoutX="136.0" layoutY="324.0" prefHeight="26.0" prefWidth="72.0" />
+      <Button fx:id="addToOrder" layoutX="273.0" layoutY="324.0" mnemonicParsing="false" onAction="#addToOrder" text="add to Order" />
+   </children>
+</AnchorPane>

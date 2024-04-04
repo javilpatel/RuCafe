@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DonutViewController">
+   <children>
+      <Text fill="#e40b0b" layoutX="222.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Donuts" textAlignment="CENTER" wrappingWidth="155.38720703125">
+         <font>
+            <Font size="46.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="donutTypes" layoutX="34.0" layoutY="89.0" onAction="#donutTypePicked" prefWidth="150.0" />
+      <ComboBox fx:id="setQuantity" layoutX="260.0" layoutY="160.0" prefHeight="26.0" prefWidth="80.0" />
+      <Button fx:id="addButton" layoutX="284.0" layoutY="217.0" mnemonicParsing="false" onAction="#addFlavoredDonut" text="&gt;&gt;" />
+      <Button fx:id="removeButton" layoutX="284.0" layoutY="272.0" mnemonicParsing="false" onAction="#removeFlavors" text="&lt;&lt;" />
+      <ListView fx:id="selectedFlavors" layoutX="377.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" />
+      <Button fx:id="addToOrder" layoutX="434.0" layoutY="360.0" mnemonicParsing="false" onAction="#AddToOrder" text="add to Order" />
+      <TextField fx:id="subtotal" layoutX="122.0" layoutY="361.0" />
+      <Text layoutX="59.0" layoutY="379.0" strokeType="OUTSIDE" strokeWidth="0.0" text="sub-total" />
+      <ImageView fx:id="donutImage" fitHeight="110.0" fitWidth="135.0" layoutX="427.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ListView fx:id="donutFlavors" layoutX="22.0" layoutY="137.0" prefHeight="200.0" prefWidth="200.0" />
+   </children>
+</AnchorPane>
